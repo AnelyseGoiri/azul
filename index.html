@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cor do Fundo</title>
+    <style>
+        /* Estilos para centralizar o conteúdo */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white; /* Cor inicial do fundo */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid #000;
+            background-color: lightgray;
+        }
+    </style>
+    <script>
+        function mudarCor() {
+            var corpo = document.body;
+            var botao = document.getElementById("btnMudarCor");
+
+            // Alterna a cor de fundo entre azul e branco
+            if (corpo.style.backgroundColor === "blue") {
+                corpo.style.backgroundColor = "white";
+                botao.style.backgroundColor = "lightgray"; // Cor do botão de volta para o padrão
+            } else {
+                corpo.style.backgroundColor = "blue";
+                botao.style.backgroundColor = "white"; // Cor do botão para branco quando o fundo ficar azul
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Alterar Cor de Fundo da Página</h1>
+        <button id="btnMudarCor" onclick="mudarCor()">Clique para mudar a cor do fundo</button>
+    </div>
+</body>
+</html>
+
